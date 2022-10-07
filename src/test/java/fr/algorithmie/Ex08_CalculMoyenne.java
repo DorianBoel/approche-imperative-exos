@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /** Ne modifiez ni les noms des classes, ni les noms des méthodes.
  * Utilisez Resultat.log pour afficher les résultats
@@ -27,6 +28,13 @@ public class Ex08_CalculMoyenne {
 	public void calculMoyenne() {
 		
 		//TODO Calculez et LOGUEZ la moyenne des valeurs du tableau (la moyenne doit être une valeur décimale).
+		int sum = 0;
+		for (int i : array) {
+			sum += i;
+		}
+		double average = (double) sum / array.length;
+		Resultat.log(average);
+		
 	}
 	
 	@Test
@@ -34,6 +42,17 @@ public class Ex08_CalculMoyenne {
 	public void calculMoyenneValeursPositives() {
 		
 		//TODO Calculez et LOGUEZ la moyenne des valeurs POSITIVES du tableau
+		int length = 0;
+		int sum = 0;
+		for (int i : array) {
+			if (i >= 0) {				
+				sum += i;
+				length++;
+			}
+		}
+		double average = (double) sum / length;
+		Resultat.log(average);
+		
 	}
 
 }

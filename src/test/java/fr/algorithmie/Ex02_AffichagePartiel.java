@@ -26,6 +26,12 @@ public class Ex02_AffichagePartiel {
 		
 		//TODO En utilisant une boucle et un if, LOGUER avec Resultat.log 
 		// les valeurs du tableau supérieures ou égales à 3
+		for (int i : array) {
+			if (i >= 3) {
+				Resultat.log(i);
+			}
+		}
+		
 	}
 	
 	@Test
@@ -33,6 +39,12 @@ public class Ex02_AffichagePartiel {
 	public void affichageValeursPaires() {
 		
 		//TODO LOGUER avec Resultat.log les valeurs paires du tableau (0 sera considéré comme pair)
+		for (int i : array) {
+			if (i % 2 == 0) {
+				Resultat.log(i);
+			}
+		}
+		
 	}
 	
 	@Test
@@ -41,6 +53,10 @@ public class Ex02_AffichagePartiel {
 		
 		//TODO LOGUER avec Resultat.log les valeurs correspondant aux index pairs du tableau 
 		// (0 sera considéré comme pair)
+		for (int i = 0; i < array.length; i += 2) {
+			Resultat.log(array[i]);
+		}
+		
 	}
 	
 	@Test
@@ -48,6 +64,12 @@ public class Ex02_AffichagePartiel {
 	public void affichageValeursImpaires() {
 		
 		//TODO LOGUER avec Resultat.log les valeurs impaires positives du tableau (0 doit être exclu)
+		
+		for (int i : array) {
+			if (i > 0 && i % 2 != 0) {
+				Resultat.log(i);
+			}
+		}
 		
 	}
 }
